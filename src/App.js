@@ -1,23 +1,7 @@
-import React from 'react';
-import './App.css';
-import api_service from './service';
-
-
-var trafficStyle = {
-  red: {
-    backgroundColor: "red"
-  },
-  yellow: {
-    backgroundColor: "yellow"
-  },
-  green: {
-    backgroundColor: "green"
-  },
-  black: {
-    backgroundColor: "black"
-  }
-};
-
+import React from 'react'
+import './App.css'
+import api_service from './service'
+import trafficStyle from './utils/trafficStyle'
 export default class App extends React.Component {
   constructor() {
     super()
@@ -95,10 +79,11 @@ export default class App extends React.Component {
   render() {
     return (
         <div className="box">
-        <div className="circle" style={this.state.green_signal}></div>
-        <div className="circle" style={this.state.yellow_signal}></div>
-        <div className="circle" style={this.state.red_signal}></div>
+          <div className="circle" style={this.state.green_signal}></div>
+          <div className="circle" style={this.state.yellow_signal}></div>
+          <div className="circle" style={this.state.red_signal}></div>
         </div> 
+
     )
   }
 
